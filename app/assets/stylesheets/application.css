@@ -33,3 +33,16 @@ p {
 a {
   color: #666;
 }
+
+
+th {
+  padding-bottom: 5px;
+}
+
+label {
+  display: block;
+}
+
+.field {
+  margin-bottom: 10px;
+}
