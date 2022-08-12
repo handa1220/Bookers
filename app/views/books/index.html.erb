@@ -32,10 +32,10 @@
 
 <h2>New Book</h2>
 
-<% if book.errors.any? %>
-  <%= book.errors.count %>件のエラーが発生しました
+<% if @errors.errors.any? %>
+  <%= @errors.errors.count %>件のエラーが発生しました %>
   <ul>
-    <% book.errors.full_messages.each do |message| %>
+    <% @errors.errors.full_messages.each do |message| %>
       <li><%= message %></li>
     <% end %>
   </ul>
