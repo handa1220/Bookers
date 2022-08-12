@@ -32,7 +32,16 @@
 
 <h2>New Book</h2>
 
-<%= form_with model: @bookN do |f| %>
+<% if book.errors.any? %>
+  <%= book.errors.count %>件のエラーが発生しました
+  <ul>
+    <% book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_with model: @books, url: books_path, method: :post do |f| %>
 <div class="field">
   <%= f.label :title, "Title" %>
   <%= f.text_field :title %>
