@@ -80,7 +80,6 @@ describe '投稿のテスト' do
             is_exist = 1
             break
           end
-        end
         expect(is_exist).to eq(1)
       end
       it 'bookの削除' do
